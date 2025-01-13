@@ -20,7 +20,7 @@ const populations = Array.from(populationSelectorResult).map(population =>
         .replace(/\[\d+\]/g, '') // Remove bracketed numbers
         .replace(/—/g, 'NULL') // Replace em dash with NULL
         .replace(/[M|C]SA:\s/g, '') // Remove 'MSA: ' or 'CSA: '
-        .replace(/;\s*\d+/g, '') // Remove second number after a semicolon
+        .replace(/\d+;/g, '') // Remove second number before a semicolon
         .trim()
 );
 
@@ -31,7 +31,7 @@ const areas = Array.from(areaSelectorResult).map(area =>
         .replace(/,/g, '') // Remove commas
         .replace(/—/g, 'NULL') // Replace em dash with NULL
         .replace(/[M|C]SA:\s/g, '') // Remove 'MSA: ' or 'CSA: '
-        .replace(/;\s*\d+/g, '') // Remove second number after a semicolon
+        .replace(/\d+;/g, '') // Remove second number before a semicolon
         .trim()
 );
 
