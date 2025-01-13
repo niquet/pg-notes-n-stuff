@@ -13,7 +13,7 @@ const countries = Array.from(countrySelectorResult).map(country =>
 );
 
 // Select populations and clean data
-const populationSelectorResult = document.querySelectorAll('.static-row-numbers > tbody:nth-child(2) > tr > td:nth-child(11)');
+const populationSelectorResult = document.querySelectorAll('.static-row-numbers > tbody:nth-child(2) > tr > td:nth-child(8)');
 const populations = Array.from(populationSelectorResult).map(population => 
     population.innerText
         .replace(/,/g, '') // Remove commas
@@ -25,7 +25,7 @@ const populations = Array.from(populationSelectorResult).map(population =>
 );
 
 // Select areas and clean data
-const areaSelectorResult = document.querySelectorAll('.static-row-numbers > tbody:nth-child(2) > tr > td:nth-child(12)');
+const areaSelectorResult = document.querySelectorAll('.static-row-numbers > tbody:nth-child(2) > tr > td:nth-child(9)');
 const areas = Array.from(areaSelectorResult).map(area => 
     area.innerText
         .replace(/,/g, '') // Remove commas
